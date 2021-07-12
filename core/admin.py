@@ -1,15 +1,15 @@
 from django.contrib import admin
 
-from .models import Produto, Cliente
+from .models import Produto, Avaliacao
 
 
 class ProdutoAdmin(admin.ModelAdmin):
     list_display = ('nome', 'preco', 'estoque')
 
 
-class ClienteAdmin(admin.ModelAdmin):
-    list_display = ('nome', 'sobrenome', 'email')
+class AvaliacaoAdmin(admin.ModelAdmin):
+    list_display = ('nome', 'email')
 
 
 admin.site.register(Produto, ProdutoAdmin)
-admin.site.register(Cliente, ClienteAdmin)
+admin.site.register(Avaliacao, AvaliacaoAdmin)
