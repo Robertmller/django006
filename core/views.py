@@ -4,18 +4,36 @@ from django.shortcuts import get_object_or_404
 from django.http import HttpResponse
 from django.template import loader
 
-from .models import Produto
+from .models import Produto, Avaliacao
 
 
 def index(request):
     produtos = Produto.objects.all()
+    avaliacao = Avaliacao.objects.all()
 
     context = {
         'curso': 'Programação Web com Django',
         'outro': 'Django é massa!',
-        'produtos': produtos
+        'produtos': produtos,
+        'avaliacao': avaliacao,
     }
     return render(request, 'index.html', context)
+
+
+
+
+
+'''
+def avaliacao(request, pk):
+    aval = Avaliacao.objects.get(id=pk)
+
+    context = {
+        'avaliacao': aval
+
+    }
+
+    return render(request, 'avaliacao.html', context)
+'''
 
 
 def contato(request):

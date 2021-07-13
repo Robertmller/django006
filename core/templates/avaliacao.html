@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>AVALIAÇÕES</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+
+<body>
+
+    <h1>AVALIAÇÕES</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>AVALIAÇÕES</th>
+                <th>COMENTÁRIOS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="{% url 'index' %}">{{ avaliacao.nome }}</a></td>
+                <td>{{ avaliacao.comentario }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

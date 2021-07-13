@@ -29,7 +29,7 @@ INSTALLED_APPS = [
     #apps
     'core',
     #'loja',
-    #'user',
+    'user',
     #'produtos',
     #'clientes',
 

@@ -15,5 +15,7 @@ urlpatterns = [
     path('', index, name='index'),
     path('contato', contato, name='contato'),
     path('produto/<int:pk>', produto, name='produto'),
-    path('api/v1/', include(router.urls))
+    path('api/v1/', include(router.urls)),
+    #path('avaliacao/<int:pk>', avaliacao, name='avaliação')
+
 ]
